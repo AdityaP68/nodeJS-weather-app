@@ -23,6 +23,16 @@ hbs.registerPartials(partialPath);
 
 //this root url will never run as the express static is running index.js/app.use setting
 //endpoints/routes
+
+app.get('/',(req,res)=>{
+    res.render('index',{
+        title: "homepage",
+        name: "Aditya Prakash",
+        age: 20
+    })
+})
+
+
 app.get('/weather',(req,res)=>{
     if(!req.query.search){
         return res.send('Please provide a valid argument');
@@ -40,13 +50,6 @@ app.get('/weather',(req,res)=>{
     })
 })
 
-app.get('/',(req,res)=>{
-    res.render('index',{
-        title: "homepage",
-        name: "Aditya Prakash",
-        age: 20
-    })
-})
 
 app.get('/about',(req,res)=>{
     res.render('about',{
