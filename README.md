@@ -1,3 +1,3 @@
 # weather-app
 
-This app was made usinmg nodeJS 
+This app was built using nodeJS 
